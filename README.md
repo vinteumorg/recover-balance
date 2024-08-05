@@ -48,41 +48,14 @@ and start Bitcoin Core:
 
 `bitcoind -signet`
 
-You should also then be able to
-execute RPCs with (for example):
+You should also then be able to execute RPCs with (for example):
 
 `bitcoin-cli -signet getblockcount`
 
-# Week 1 (keys and addresses)
+# Task 1 (keys and addresses)
 
 See [Recover Balance](./recover_balance.md) coding challenge
 
-# Week 2 (transactions, scripts, and signatures)
+# Task 2 (transactions, scripts, and signatures)
 
 See [Send Multisig](./send_multisig.md) coding challenge
-
-# Admin Infrastructure
-
-**Students do not need to read this section**
-
-<details>
-    <summary>Setup the Signet server</summary>
-
-The included script [signet-setup.py](./signet-setup.py) needs to be run by
-the administrator on a publicly reachable server to start the game.
-
-The script requires a local installation of Bitcoin Core since it consumes
-the test framework as a library.
-
-Usage: `python signet-setup.py <path/to/bitcoin> <path/to/student/files> <path/for/bitcoin/datadir>`
-
-`<path/to/bitcoin>`: (required) Path to local installation of Bitcoin Core repository
-
-`<path/to/student/files>`: (optional, default `./config`) Destination for student bitcoin.conf and wallet descriptors
-
-`<path/for/bitcoin/datadir>`: (optional, default is `os.tmpdir()`) Data directory for the signet full node
-
-The script runs the signet full node, creates all the wallets and continues mining blocks forever.
-It should never be killed, but the node can always be restarted by using `-datadir=<path/for/bitcoin/datadir>`
-
-</details>
