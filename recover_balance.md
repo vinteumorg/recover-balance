@@ -25,9 +25,8 @@ descriptor into Bitcoin Core to check your own work as you develop the wallet lo
 ## Submission
 
 Each student will get a private fork of this repository when they accept the
-GitHub Classroom assignment. You will commit and push your submissions to GitHub
-which will evaluate the answers automatically. You can commit and push as often
-as you like and GitHub will re-evaluate your code every time.
+GitHub Classroom assignment. There's no autograder for this task, but we will
+manually review your submission.
 
 Your code will be executed in an environment with a synced signet full node,
 so any `bitcoin-cli -signet ...` commands executed in the shell should work
@@ -47,16 +46,13 @@ languages:
 - Rust
 - Go
 
-The autograder runs in Ubuntu 22 with
-[these packages](https://github.com/actions/runner-images/blob/ubuntu22/20231217.2/images/ubuntu/Ubuntu2204-Readme.md)
-installed by GitHub.
+The reviewer will run the bash script
+[solution/run_balance.sh](solution/run_balance.sh) which MAY BE EDITED BY
+STUDENTS if you need to install additional dependencies. Only the very last line
+of that script's output will be evaluated so make sure your code runs last in
+the script, and prints the answer last!
 
-The autograder will run the bash script [solution/run_balance.sh](solution/run_balance.sh) which
-MAY BE EDITED BY STUDENTS if you need to install additional dependencies. Only
-the very last line of that script's output will be evaluated so make sure your
-code runs last in the script, and prints the answer last!
-
-The default language for this exercise and the autograder is Python. The easiest
+The default language for this exercise is Python. The easiest
 way to complete this project is to complete the obfuscated code template in
 [solution/python/balance.py](solution/python/balance.py). No other files need
 to be modified unless you want to start from scratch in Python or write in one

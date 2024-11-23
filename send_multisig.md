@@ -50,9 +50,9 @@ you can modify that script.
 You code must return exactly TWO lines, each line containing the raw hex string
 for a valid transaction. (see the [example](#example-output) below).
 
-The autograder will again run in an environment with a signet node that is stuck
+The reviewer will your code in an environment with a signet node that is stuck
 on block 400. We do this so that even if you have already spent your coins and submitted
-your transactions to the signet network, the autograder node will NOT process those
+your transactions to the signet network, the node will NOT process those
 transactions and they can be evaluated again locally! Both transactions must be
 accepted to the autograder node's mempool to pass.
 

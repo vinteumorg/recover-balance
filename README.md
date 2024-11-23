@@ -11,7 +11,7 @@ To reduce the scope of this project the wallet will be very limited:
 all vectors will be under 255 bytes in length and always require one single
 byte to indicate length.
 - All sending and receiving addresses will be [`p2wpkh`](https://en.bitcoin.it/wiki/BIP_0141#P2WPKH)
-    - Except one [`p2wsh`](https://en.bitcoin.it/wiki/BIP_0141#P2WSH) multisig which is the goal of the week 2 assignment
+    - Except one [`p2wsh`](https://en.bitcoin.it/wiki/BIP_0141#P2WSH) multisig which is the goal of the second assignment
 - Fees can be hard-coded by value, no estimation is necessary.
 - Transactions you create will always have exactly 1 input and 2 outputs.
 - Don't worry about invalid keys (probabilty is less than 1 in 2<sup>127</sup>)
@@ -25,7 +25,7 @@ byte to indicate length.
 ## Custom Signet
 
 We will pre-fabricate a signet blockchain and host a mining node that everyone
-can connect to, download the chain (around 20 MB), and broadcast their completed transactions.
+can connect to, download the chain (around 100 MB), and broadcast their completed transactions.
 We will have already generated private key descriptors for each student and used
 them to generate hundreds of transactions sending and receiving in the chain.
 Each student will be provided with a single `wpkh` descriptor with an extended
